@@ -16,6 +16,7 @@ stdenv.mkDerivation rec {
     owner = "boschmitt";
     repo = "tweedledum";
     rev = "a4549579873b69466d32600b6a7f2e68f5486aee";
+    sha256 = "0f30i0v2dyjkfygf0irjfsk8acp5ncypkjshy2nv7cyp3rgnkqad";
   };
 
   nativeBuildInputs = [ cmake ninja ];
