@@ -10,6 +10,7 @@
 }:
 stdenv.mkDerivation rec {
   pname = "tweedledum";
+  version = "a4549579873b69466d32600b6a7f2e68f5486aee";
 
   src = fetchFromGitHub{
     owner = "boschmitt";
