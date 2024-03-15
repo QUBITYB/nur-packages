@@ -10,22 +10,13 @@
 }:
 stdenv.mkDerivation rec {
   pname = "tweedledum";
-  version = "1.1.1";
 
   src = fetchFromGitHub{
     owner = "boschmitt";
     repo = "tweedledum";
-    rev = "v${version}";
-    sha256 = "sha256-wgrY5ajaMYxznyNvlD0ul1PFr3W8oV9I/OVsStlZEBM=";
+    rev = "master";
+    sha256 = "a4549579873b69466d32600b6a7f2e68f5486aee";
   };
-
-  patches = [
-    (fetchpatch {
-      name = "pr-173-update-catch2.patch";
-      url = "https://github.com/boschmitt/tweedledum/commit/2791ff2588c149ad10196b3989c8faa0e1237c32.patch";
-      sha256 = "sha256-ZRKrtr+xNKCPFC8Vzbql/0pENLytu8kuL7yLycr9CO8=";
-    })
-  ];
 
   nativeBuildInputs = [ cmake ninja ];
   buildInputs = [
